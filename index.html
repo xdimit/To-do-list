@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Lesson JQuery</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="jquery-3.4.1.min.js"></script>
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="to-do-list">
+            <h2 class="to-do-list__name">Список дел:</h2>
+            <div class="to-do-list__box close">
+                Список пуст...
+                <!-- <div class="list-item">
+            		<p class="list-item__name">Купить лошадь<img src="cross.png" alt="крестик" class="cross"></p>
+            		<div class="list-item__content">
+            			По цене 300 т.р. за штуку	
+            		</div>
+            	</div> -->
+            </div>
+        </div>
+        <div class="form">
+            <h2 class="form__name">Добавить новое дело</h2>
+            <form class="form__box">
+                <p class="form__title">* Название</p>
+                <input class="form__ip-title" type="text" maxlength="40">
+                <p class="form__description">* Описание</p>
+                <textarea class="form__ta-description" name="description" cols="30" rows="10"></textarea>
+                <button class="form__button">Добавить дело</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+.form__ip-title,
+.form__ta-description {
+    width: 100%;
+    background-color: #f5f5f5;
+    border: 1px solid #ebebeb;
+}
+
+h2 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+.container {
+    width: 980px;
+    margin: 0 auto;
+    padding-top: 65px;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.to-do-list {
+    float: left;
+    display: inline-block;
+}
+
+.form {
+    margin: 0;
+    width: 470px;
+    float: right;
+}
+
+.form,
+.to-do-list {
+    width: 49%;
+    background-color: #ffffff;
+}
+
+.form__name,
+.form__title,
+.form__button, 
+.form__description,
+.form__ip-title, 
+.form__ta-description{
+    font-family: "Arial regular";
+}
+
+.form__name,
+.to-do-list__name {
+    margin: 0;
+    color: #000000;
+    font-size: 21px;
+    font-style: normal;
+    padding-bottom: 34px;
+    background-color: #f5f5f5;
+    font-family: "Arial regular";
+}
+
+.form__title,
+.form__description {
+    margin-top: 0;
+    color: #8993ad;
+    font-size: 14px;
+    font-family: "Arial regular";
+}
+
+.form__box {
+    padding: 40px;
+}
+
+.form__ip-title {
+    height: 45px;
+}
+
+.form__ta-description {
+    resize: none;
+    height: 230px;
+}
+
+.form__ip-title,
+.form__ta-description {
+	font-size: 16px;
+	margin-bottom: 30px;
+}
+
+.form__button {
+    width: 224px;
+    height: 55px;
+    color: #ffffff;
+    border: 0 none;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #2174fd;
+    font-family: "Arial regular";
+}
+
+.to-do-list__box {
+	background-color: #f5f5f5;
+}
+
+/*---------------List is Empty Start----------------------------*/
+
+.close {
+    margin-top: 0;
+    color: #8993ad;
+    font-size: 14px;
+    font-family: "Arial regular";
+}
+
+/*-------------------List is Empty END-------------------------*/
+
+/*-----------------List is FULL Start--------------------------*/
+
+.list-item {
+	font-family: "Arial regular";
+	background-color: #ffffff;
+	margin-bottom: 20px;	
+}
+
+.list-item__name {
+	position: relative;
+	margin: 0;
+	padding: 18px 20px;
+	height: 18px;
+	font-size: 16px;
+	color: #000000;
+	border-bottom: 1px solid #f7f7f7;
+	 /*pointer-events: none;	*/
+}
+
+.list-item__name:after {
+	position: absolute;
+	right: 24px;
+	top: 40%;
+	cursor: pointer;
+	font-size: 10px;
+	content: '\25BC';
+	/*pointer-events: all; */
+}
+
+.list-item__content {
+	margin: 0;
+	padding: 18px 20px;
+	height: 50px;
+	font-size: 14px;
+	color: #8993ad;
+	word-wrap: break-word;
+	overflow-x: hidden;
+}
+
+.cross {
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+/*-------------------List is FULL END--------------------------*/
+
+
+/*\25C4 стрелочка влево*/
