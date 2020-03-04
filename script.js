@@ -46,24 +46,6 @@ $(function() {
         }
     }
 
-    function getClass(obj) {
-        return {}.toString.call(obj).slice(8, -1);
-    }
-
-    function checkClose() {
-        let obj = document.querySelector('div.to-do-list__box').firstChild;
-        let res = getClass(obj).toLowerCase();
-
-        if (res != 'htmldivelement') {
-            addClose();
-        }
-
-        if (res == 'text') {
-            removeClose();
-        }
-
-    }
-
     function addClose() {
         $(".to-do-list__box").addClass('close');
         $(".to-do-list__box").text('Список пуст...');
@@ -85,6 +67,23 @@ $(function() {
             '</div>' +
             '</div>');
         return el;
+    }
+
+    function getClass(obj) {
+        return {}.toString.call(obj).slice(8, -1);
+    }
+
+    function checkClose() {
+        let obj = document.querySelector('div.to-do-list__box').firstChild;
+        let res = getClass(obj).toLowerCase();
+
+        if (res != 'htmldivelement') {
+            addClose();
+        }
+
+        if (res == 'text') {
+            removeClose();
+        }
     }
 
     function hideContent(target) {
@@ -110,5 +109,5 @@ $(function() {
             checkClose();
         }
     }
-    
+
 });
