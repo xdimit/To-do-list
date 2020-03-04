@@ -22,6 +22,15 @@ $(function() {
         event.preventDefault();
     });
 
+    $(document).on('click', function(event) {
+        let target = event.target;
+
+        deleteListItem(target);
+        hideContent(target);
+
+        event.preventDefault();
+    });
+
     function clearLines() {
         $(".form__ip-title").val('');
         $(".form__ta-description").val('');
@@ -68,29 +77,38 @@ $(function() {
     function createNewListItem(t, d) {
         let el = $('<div class="list-item">' +
             '<p class="list-item__name">' + t +
-            '<img src="cross.png" alt="крестик" class="cross"></p>' +
+            '<img src="cross.png" alt="крестик" class="cross">' +
+            '<span class="arrow down">' +
+            '</span>' +
+            '</p>' +
             '<div class="list-item__content">' + d +
             '</div>' +
             '</div>');
         return el;
-    };
+    }
 
-    $(document).on('click', function(event) {
-        let target = event.target;
+    function hideContent(target) {
+        let content = target.parentElement.parentElement.children[1];
+        if (target.className == 'arrow down') {
 
-        // console.log(target.className);
+            target.classList.remove('down');
+            target.classList.add('left');
+            content.classList.add('contentHidden');
+
+        } else if (target.className == 'arrow left') {
+
+            target.classList.remove('left');
+            target.classList.add('down');
+            content.classList.remove('contentHidden');
+        }
+    }
+
+    function deleteListItem(target) {
 
         if (target.className == 'cross') {
             target.parentElement.parentElement.remove();
             checkClose();
         }
-
-        if (target.className =='list-item__name') {
-        	alert('ok');
-        }
-
-        event.preventDefault();
-    });
-
+    }
 
 });

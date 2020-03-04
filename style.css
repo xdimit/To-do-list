@@ -44,16 +44,17 @@ h2 {
 
 .form__name,
 .form__title,
-.form__button, 
+.form__button,
 .form__description,
-.form__ip-title, 
-.form__ta-description{
+.form__ip-title,
+.form__ta-description {
     font-family: "Arial regular";
 }
 
 .form__name,
 .to-do-list__name {
     margin: 0;
+    /*margin-bottom: 34px;*/
     color: #000000;
     font-size: 21px;
     font-style: normal;
@@ -85,8 +86,8 @@ h2 {
 
 .form__ip-title,
 .form__ta-description {
-	font-size: 16px;
-	margin-bottom: 30px;
+    font-size: 16px;
+    margin-bottom: 30px;
 }
 
 .form__button {
@@ -101,7 +102,7 @@ h2 {
 }
 
 .to-do-list__box {
-	background-color: #f5f5f5;
+    background-color: #f5f5f5;
 }
 
 /*---------------List is Empty Start----------------------------*/
@@ -118,45 +119,82 @@ h2 {
 /*-----------------List is FULL Start--------------------------*/
 
 .list-item {
-	font-family: "Arial regular";
-	background-color: #ffffff;
-	margin-bottom: 20px;	
+    font-family: "Arial regular";
+    background-color: #ffffff;
+
+    margin-bottom: 20px;
 }
 
 .list-item__name {
-	position: relative;
-	margin: 0;
-	padding: 18px 20px;
-	height: 18px;
-	font-size: 16px;
-	color: #000000;
-	border-bottom: 1px solid #f7f7f7;
-	 /*pointer-events: none;	*/
+    position: relative;
+    margin: 0;
+    padding: 18px 20px;
+    height: 18px;
+    font-size: 16px;
+    color: #000000;
+    border-bottom: 1px solid #f7f7f7;
+
+    /*margin-top: 20px;*/
+    /*pointer-events: none;*/
 }
 
-.list-item__name:after {
-	position: absolute;
-	right: 24px;
-	top: 40%;
-	cursor: pointer;
-	font-size: 10px;
-	content: '\25BC';
-	/*pointer-events: all; */
+/*.list-item__name:after {
+    position: absolute;
+    right: 24px;
+    top: 40%;
+    cursor: pointer;
+    font-size: 10px;
+    content: '\25BC';
+    pointer-events: all; 
+}*/
+
+.arrow {
+    /*position: relative;*/
+    pointer-events: none;
+}
+
+.down:after {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    cursor: pointer;
+    font-size: 10px;
+    content: '\25BC';
+    pointer-events: all;
+}
+
+
+
+.left:after {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    cursor: pointer;
+    font-size: 10px;
+    content: '\25C4';
+    pointer-events: all;
 }
 
 .list-item__content {
-	margin: 0;
-	padding: 18px 20px;
-	height: 50px;
-	font-size: 14px;
-	color: #8993ad;
-	word-wrap: break-word;
-	overflow-x: hidden;
+    margin: 0;
+
+    /*margin-bottom: 20px;*/
+
+    padding: 18px 20px;
+    height: 50px;
+    font-size: 14px;
+    color: #8993ad;
+    word-wrap: break-word;
+    overflow-x: hidden;
+}
+
+.contentHidden {
+    display: none;
 }
 
 .cross {
-	margin-left: 20px;
-	cursor: pointer;
+    margin-left: 20px;
+    cursor: pointer;
 }
 
 /*-------------------List is FULL END--------------------------*/
