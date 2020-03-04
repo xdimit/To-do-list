@@ -110,5 +110,5 @@ $(function() {
             checkClose();
         }
     }
-
+    
 });
