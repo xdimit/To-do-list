@@ -8,7 +8,7 @@ $(function() {
         checkWarning();
 
         if (title == '' || description == '') {
-            warning();
+            showWarning();
             return false;
         }
 
@@ -36,7 +36,7 @@ $(function() {
         $(".form__ta-description").val('');
     }
 
-    function warning() {
+    function showWarning() {
         $(".form__box").css('border', '1px solid red');
     }
 
